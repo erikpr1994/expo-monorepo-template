@@ -1,13 +1,9 @@
 version: 2
 updates:
+  # One entry for the whole pnpm workspace (the lockfile lives at the root).
+  # Expo pins SDK-compatible versions of these; the "Update skills and Expo" workflow bumps them.
   - package-ecosystem: npm
-    directories: [/, /apps/web]
-    schedule: { interval: daily }
-    groups:
-      all: { patterns: ["*"] }
-  # Expo pins SDK-compatible versions; the "Update skills and Expo" workflow bumps those.
-  - package-ecosystem: npm
-    directory: /apps/mobile
+    directory: /
     schedule: { interval: daily }
     ignore:
       - dependency-name: "expo"
@@ -17,12 +13,14 @@ updates:
       - dependency-name: "react-dom"
       - dependency-name: "react-native"
       - dependency-name: "react-native-*"
+      - dependency-name: "@react-native/*"
       - dependency-name: "@types/react"
+      - dependency-name: "@types/react-dom"
       - dependency-name: "typescript"
     groups:
-      all: { patterns: ["*"] }
+      minor-and-patch: { patterns: ["*"], update-types: [minor, patch] }
   - package-ecosystem: github-actions
     directory: /
     schedule: { interval: daily }
     groups:
-      all: { patterns: ["*"] }
+      minor-and-patch: { patterns: ["*"], update-types: [minor, patch] }
