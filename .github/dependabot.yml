@@ -1,0 +1,28 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directories: [/, /apps/web]
+    schedule: { interval: daily }
+    groups:
+      all: { patterns: ["*"] }
+  # Expo pins SDK-compatible versions; bump those with `npx expo install --fix`, not Dependabot.
+  - package-ecosystem: npm
+    directory: /apps/mobile
+    schedule: { interval: daily }
+    ignore:
+      - dependency-name: "expo"
+      - dependency-name: "expo-*"
+      - dependency-name: "@expo/*"
+      - dependency-name: "react"
+      - dependency-name: "react-dom"
+      - dependency-name: "react-native"
+      - dependency-name: "react-native-*"
+      - dependency-name: "@types/react"
+      - dependency-name: "typescript"
+    groups:
+      all: { patterns: ["*"] }
+  - package-ecosystem: github-actions
+    directory: /
+    schedule: { interval: daily }
+    groups:
+      all: { patterns: ["*"] }

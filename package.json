@@ -1,0 +1,12 @@
+{
+  "name": "expo-monorepo-template",
+  "private": true,
+  "scripts": {
+    "dev:web": "pnpm --filter web dev",
+    "dev:mobile": "pnpm --filter mobile start",
+    "lint": "pnpm -r lint",
+    "build": "pnpm --filter web build",
+    "check:mobile": "pnpm --filter mobile exec tsc --noEmit && pnpm --filter mobile exec expo install --check"
+  },
+  "packageManager": "pnpm@10.33.0"
+}
