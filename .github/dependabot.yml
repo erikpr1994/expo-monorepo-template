@@ -5,7 +5,7 @@ updates:
     schedule: { interval: daily }
     groups:
       all: { patterns: ["*"] }
-  # Expo pins SDK-compatible versions; bump those with `npx expo install --fix`, not Dependabot.
+  # Expo pins SDK-compatible versions; the "Update skills and Expo" workflow bumps those.
   - package-ecosystem: npm
     directory: /apps/mobile
     schedule: { interval: daily }
