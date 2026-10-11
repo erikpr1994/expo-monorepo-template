@@ -2,8 +2,8 @@
 
 Next.js web + Expo mobile in a pnpm workspace, with Claude Code config, ready for a new idea.
 
-- **Skills**: Vercel (`vercel-labs/agent-skills`) and Matt Pocock (`mattpocock/skills`) in `.claude/skills`, pinned in `skills-lock.json`.
-- **Plugins**: impeccable, ponytail and expo, via `.claude/settings.json` (auto-updating marketplaces).
+- **Skills**: relevant ones from Vercel (`vercel-labs/agent-skills`), Expo (`expo/skills`), Emil Kowalski (`emilkowalski/skills`) and all of Matt Pocock (`mattpocock/skills`), pinned in `skills-lock.json`.
+- **Plugins**: impeccable and ponytail, via `.claude/settings.json` (auto-updating marketplaces).
 - **MCP**: lazyweb, via `.mcp.json`. Export `LAZYWEB_API_KEY` in your shell.
 - **Updates**: Dependabot runs daily and green PRs auto-merge (Expo SDK packages excluded); `Update skills and Expo` workflow refreshes skills and runs `expo install expo@latest --fix` daily. Both land on `main`.
 
