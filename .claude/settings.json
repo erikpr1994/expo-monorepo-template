@@ -17,7 +17,8 @@
   },
   "enabledPlugins": {
     "impeccable@impeccable": true,
-    "ponytail@ponytail": true
+    "ponytail@ponytail": true,
+    "expo@claude-plugins-official": true
   },
   "enableAllProjectMcpServers": true
 }
