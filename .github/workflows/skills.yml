@@ -22,6 +22,8 @@ jobs:
         working-directory: apps/mobile
       # Same packages for web, which Dependabot skips because they're shared with mobile.
       - run: pnpm --filter web up react react-dom @types/react @types/react-dom typescript
+      # Incremental adds leave old-SDK peer variants (e.g. a second @types/react) in the lockfile.
+      - run: pnpm dedupe
       # Pushes from GITHUB_TOKEN don't trigger CI, so check here before landing on main.
       - run: pnpm lint && pnpm build && pnpm check:mobile
       - run: |

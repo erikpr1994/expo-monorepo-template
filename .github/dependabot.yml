@@ -17,6 +17,10 @@ updates:
       - dependency-name: "@types/react"
       - dependency-name: "@types/react-dom"
       - dependency-name: "typescript"
+      - dependency-name: "eslint-config-expo"
+      # eslint-plugin-react (via eslint-config-expo) crashes on ESLint 10.
+      - dependency-name: "eslint"
+        update-types: ["version-update:semver-major"]
     groups:
       minor-and-patch: { patterns: ["*"], update-types: [minor, patch] }
   - package-ecosystem: github-actions
