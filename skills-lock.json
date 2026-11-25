@@ -54,8 +54,8 @@
       "source": "mattpocock/skills",
       "sourceType": "github",
       "skillPath": "skills/in-progress/chief-of-staff/SKILL.md",
-      "computedHash": "dc3348d0f641956ea78dafa037aea745154c516a286ed4156b0c2ec0cbcf581b",
-      "commit": "5863806dd4e15c63174bee4e7515a4256792ecfa"
+      "computedHash": "a429ec90dfd59d2fc00d1d6ebae34a315068856b5b4b64a9e2f6a1c9c86e7e0f",
+      "commit": "d65391149dbb5fe76478e76fa8d5122b2aa5a70e"
     },
     "claude-handoff": {
       "source": "mattpocock/skills",
